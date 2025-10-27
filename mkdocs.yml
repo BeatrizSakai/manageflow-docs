@@ -1,0 +1,50 @@
+site_name: ManageFlow — Documentação da Aplicação
+site_description: O que é, como funciona e como operar o ManageFlow
+site_url: https://BeatrizSakai.github.io/manageflow-docs
+
+theme:
+  name: material
+  language: pt
+  logo: assets/logo-light.png
+  logo_dark: assets/logo-dark.png
+  favicon: assets/favicon.png
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - search.suggest
+    - content.code.copy
+    - content.tabs.link
+    - toc.integrate
+  palette:
+    - scheme: default
+      primary: blue
+      accent: teal
+    - scheme: slate
+      primary: blue
+      accent: teal
+
+extra_css:
+  - assets/brand.css
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - tables
+  - toc:
+      permalink: true
+  - attr_list
+  - def_list
+
+nav:
+  - Início: index.md
+  - Visão Geral: overview.md
+  - Como Funciona: how-it-works.md
+  - Papéis & Permissões: roles-permissions.md
+  - Módulos: modules.md
+  - Fluxo Público (Cliente): public-flow.md
+  - Dashboard (Tempo real): dashboard.md
+  - Operação (Dia a dia): operations.md
+  - FAQ: faq.md
+  - Glossário: glossary.md
