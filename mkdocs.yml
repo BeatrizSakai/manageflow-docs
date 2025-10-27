@@ -5,8 +5,8 @@ site_url: https://BeatrizSakai.github.io/manageflow-docs
 theme:
   name: material
   language: pt
-  logo: assets/logo-light.png
-  logo_dark: assets/logo-dark.png
+  logo: assets/logo-dark.png
+  logo_dark: assets/logo-light.png
   favicon: assets/favicon.png
   features:
     - navigation.tabs
