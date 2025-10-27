@@ -9,18 +9,30 @@ on:
       - '.github/workflows/deploy-docs.yml'
   workflow_dispatch:
 
+permissions:
+  contents: write    # <- necessário para criar/atualizar a branch gh-pages
+
 jobs:
   build-deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-python@v5
         with:
           python-version: '3.11'
-      - run: pip install mkdocs mkdocs-material
-      - run: mkdocs build --clean
+
+      - name: Install MkDocs + Material
+        run: |
+          python -m pip install --upgrade pip
+          pip install mkdocs mkdocs-material
+
+      - name: Build site
+        run: mkdocs build --clean
+
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./site
+          # cname: manageflowdocs.com   # descomente quando o DNS estiver ok
