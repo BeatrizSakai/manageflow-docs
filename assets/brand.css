@@ -1,0 +1,39 @@
+/* ====== ManageFlow — Identidade Visual (claro/escuro) ====== */
+
+/* Tipografia */
+:root {
+  --md-text-font: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  --mf-radius: 12px;
+
+  /* Cores base — ajuste conforme seu Figma */
+  --mf-primary-600: #2563EB; /* azul 600 (claro) */
+  --mf-primary-700: #1D4ED8; /* azul 700 */
+  --mf-accent-500:  #0EA5A4; /* teal 500 */
+}
+
+/* Fonte global */
+.md-typeset, .md-nav, .md-header, .md-footer { font-family: var(--md-text-font); }
+
+/* Header e título */
+.md-header__title { font-weight: 600; }
+
+/* Links */
+.md-typeset a { text-decoration-thickness: .08em; }
+
+/* Admonitions */
+.md-typeset .admonition { border-radius: var(--mf-radius); }
+.md-typeset .admonition-title { font-weight: 600; }
+
+/* Tabelas */
+.md-typeset table { border-radius: var(--mf-radius); overflow: hidden; }
+
+/* Botão copiar */
+.md-clipboard { border-radius: 8px; }
+
+/* Ajuste de primária */
+:root {
+  --md-primary-fg-color: var(--mf-primary-600);
+}
+[data-md-color-scheme="slate"] {
+  --md-primary-fg-color: var(--mf-primary-700);
+}
